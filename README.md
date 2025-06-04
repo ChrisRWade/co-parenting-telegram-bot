@@ -117,8 +117,18 @@ The bot will start and begin monitoring messages. Check the console for detailed
 # Connect via SSH
 ssh -i your-key.pem ec2-user@your-instance-ip
 
-# Update system
+# Update system and install dependencies
+# For Ubuntu/Debian:
 sudo apt-get update && sudo apt-get install -y git python3-venv
+
+# For Amazon Linux 2023:
+sudo dnf update -y && sudo dnf install -y git python3-pip python3-venv
+
+# For Amazon Linux 2 (older):
+sudo yum update -y && sudo yum install -y git python3-pip python3-venv
+
+# Check your OS version if unsure:
+cat /etc/os-release
 
 # Clone and setup project
 git clone <your-repo-url>
