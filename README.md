@@ -122,10 +122,10 @@ ssh -i your-key.pem ec2-user@your-instance-ip
 sudo apt-get update && sudo apt-get install -y git python3-venv
 
 # For Amazon Linux 2023:
-sudo dnf update -y && sudo dnf install -y git python3-pip python3-venv
+sudo dnf update -y && sudo dnf install -y git python3-pip
 
 # For Amazon Linux 2 (older):
-sudo yum update -y && sudo yum install -y git python3-pip python3-venv
+sudo yum update -y && sudo yum install -y git python3-pip
 
 # Check your OS version if unsure:
 cat /etc/os-release
